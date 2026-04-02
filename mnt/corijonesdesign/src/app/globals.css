@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/* === DESIGN TOKENS (CSS Custom Properties) === */
+:root {
+  /* === DARK MODE (Default) === */
+  --bg-primary:        #0A0A0B;
+  --bg-secondary:      #141416;
+  --bg-elevated:       #1C1C1F;
+  --bg-grid:           #1A1A1D;
+
+  --text-primary:      #F0EDE8;
+  --text-secondary:    #8A8A8E;
+  --text-tertiary:     #4A4A4E;
+
+  --accent:            #E84D1A;
+  --accent-hover:      #FF6634;
+  --accent-muted:      rgba(232, 77, 26, 0.1);
+  --accent-glow:       rgba(232, 77, 26, 0.2);
+
+  --border:            #2A2A2E;
+  --border-accent:     rgba(232, 77, 26, 0.27);
+
+  /* === Spacing === */
+  --grid-columns:      12;
+  --grid-gutter:       1.5rem;
+  --grid-margin:       2rem;
+
+  /* === Motion === */
+  --ease-out:          cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:       cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast:     200ms;
+  --duration-base:     350ms;
+  --duration-slow:     500ms;
+  --duration-dramatic: 1200ms;
+}
+
+[data-theme="light"] {
+  --bg-primary:        #F5F2ED;
+  --bg-secondary:      #ECEAE5;
+  --bg-elevated:       #E3E0DB;
+  --bg-grid:           #DDD9D4;
+
+  --text-primary:      #1A1A1D;
+  --text-secondary:    #6A6A6E;
+  --text-tertiary:     #9A9A9E;
+
+  --accent:            #C93D0E;
+  --accent-hover:      #E84D1A;
+  --accent-muted:      rgba(201, 61, 14, 0.08);
+  --accent-glow:       rgba(201, 61, 14, 0.15);
+
+  --border:            #D0CCC7;
+  --border-accent:     rgba(201, 61, 14, 0.2);
+}
+
+/* === Tailwind v4 Theme Extension === */
+@theme inline {
+  /* Colors */
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-elevated: var(--bg-elevated);
+  --color-bg-grid: var(--bg-grid);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-muted: var(--accent-muted);
+  --color-accent-glow: var(--accent-glow);
+
+  --color-border-default: var(--border);
+  --color-border-accent: var(--border-accent);
+
+  /* Fonts */
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Font sizes — Display scale */
+  --font-size-display-xl: clamp(3.5rem, 8vw, 9rem);
+  --font-size-display-lg: clamp(2.5rem, 6vw, 6rem);
+  --font-size-display-md: clamp(2rem, 4vw, 4rem);
+
+  /* Font sizes — Heading scale */
+  --font-size-heading-lg: clamp(1.5rem, 3vw, 3rem);
+  --font-size-heading-md: clamp(1.25rem, 2vw, 2rem);
+  --font-size-heading-sm: clamp(1rem, 1.5vw, 1.5rem);
+
+  /* Font sizes — Body scale */
+  --font-size-body-lg: clamp(1rem, 1.2vw, 1.25rem);
+  --font-size-body-md: clamp(0.95rem, 1.1vw, 1.125rem);
+  --font-size-body-sm: clamp(0.85rem, 0.9vw, 0.95rem);
+
+  /* Font sizes — Caption */
+  --font-size-caption: 0.75rem;
+
+  /* Timing functions */
+  --ease-out-expo: var(--ease-out);
+  --ease-in-out-expo: var(--ease-in-out);
+}
+
+/* === Base Styles === */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color var(--duration-slow) var(--ease-out),
+              color var(--duration-slow) var(--ease-out);
+}
+
+::selection {
+  background-color: var(--accent-muted);
+  color: var(--accent);
+}
+
+/* === Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* === Responsive Grid Margins === */
+@media (max-width: 768px) {
+  :root {
+    --grid-columns: 4;
+    --grid-gutter: 1rem;
+    --grid-margin: 1rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  :root {
+    --grid-columns: 8;
+    --grid-gutter: 1.25rem;
+    --grid-margin: 1.5rem;
+  }
+}
