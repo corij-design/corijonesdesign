@@ -7,41 +7,41 @@ import { TypeWeight } from "@/components/typography/type-weight";
 import Link from "next/link";
 import { caseStudies } from "@/lib/content";
 
-const study = caseStudies[0];
-const next = caseStudies[1];
+const study = caseStudies[1];
+const next = caseStudies[2];
 
 // ---------------------------------------------------------------
-// Cascade diagram data — the five failure modes this engagement hit
+// Coherence infrastructure — what was built from zero
 // ---------------------------------------------------------------
-const cascadeSteps = [
+const coherenceStack = [
   {
-    label: "5 Definitions of Quality",
-    mode: "Unclear Outcomes",
-    active: true,
+    layer: "Decision Rights",
+    what: "Product trio model",
+    detail: "PM + Designer + Eng Lead as equal partners",
   },
   {
-    label: "Competing roadmaps across BUs",
-    mode: "Priority Thrash",
-    active: true,
+    layer: "Shared Context",
+    what: "Multi-year product vision",
+    detail: "Research-grounded, communicated through prototypes",
   },
   {
-    label: "Designers waiting years to ship",
-    mode: "Collapsed Ownership",
-    active: true,
+    layer: "Explicit Outcomes",
+    what: "Strategic roadmap",
+    detail: "Each phase tied to lifecycle opportunity + clear ownership",
   },
   {
-    label: "54 button styles, 5 design systems",
-    mode: "Misaligned Constraints",
-    active: true,
+    layer: "Ownership Architecture",
+    what: "Embedded research + design system",
+    detail: "Capabilities within trios, not siloed functions",
   },
   {
-    label: "Agency model replaced learning with ritual",
-    mode: "Process as Shield",
-    active: true,
+    layer: "Culture Infrastructure",
+    what: "Design Summit",
+    detail: "Recurring ritual for alignment, not just team-building",
   },
 ];
 
-export default function ClosingTheGapPage() {
+export default function BuildingCoherencePage() {
   return (
     <PageTransition>
       <main className="min-h-screen py-24">
@@ -106,18 +106,16 @@ export default function ClosingTheGapPage() {
         </Grid>
 
         {/* ============================================== */}
-        {/* PULL QUOTE — editorial break */}
+        {/* PULL QUOTE */}
         {/* ============================================== */}
         <div className="my-16 lg:my-24">
           <Grid>
             <ScrollReveal className="col-span-4 md:col-span-8 lg:col-span-8 lg:col-start-3">
               <blockquote className="border-l-2 border-accent pl-8 lg:pl-12">
                 <p className="text-heading-lg font-display font-semibold leading-[1.15] tracking-[-0.02em] text-text-primary">
-                  Leadership assumed it was a design problem.
+                  The company didn&apos;t need a redesign.
                   <br />
-                  <span className="text-accent">It wasn&apos;t.</span>
-                  <br />
-                  It was a coherence problem.
+                  It needed <span className="text-accent">coherence</span>.
                 </p>
               </blockquote>
             </ScrollReveal>
@@ -125,42 +123,36 @@ export default function ClosingTheGapPage() {
         </div>
 
         {/* ============================================== */}
-        {/* CASCADE DIAGRAM — the failure modes at play */}
+        {/* COHERENCE STACK — what was built from zero */}
         {/* ============================================== */}
         <div className="border-y border-border-default py-16 lg:py-20 my-8">
           <Grid>
             <ScrollReveal className="col-span-4 md:col-span-3 lg:col-span-3 lg:col-start-2 mb-8 lg:mb-0">
               <h2 className="text-caption uppercase text-text-tertiary font-mono tracking-[0.08em] mb-3">
-                The Cascade
+                Coherence Stack
               </h2>
               <p className="text-body-sm text-text-secondary leading-[1.6] max-w-[28ch]">
-                All five failure modes from{" "}
-                <em className="text-text-primary">The Coherence Gap</em> were
-                active in this organization.
+                Five layers of structural infrastructure, built from zero in two years.
               </p>
             </ScrollReveal>
 
             <div className="col-span-4 md:col-span-5 lg:col-span-6 lg:col-start-5">
-              {cascadeSteps.map((step, i) => (
-                <ScrollReveal key={step.mode} delay={i * 0.06}>
-                  <div className="flex items-start gap-5 mb-6 last:mb-0">
-                    {/* Vertical connector + indicator */}
+              {coherenceStack.map((item, i) => (
+                <ScrollReveal key={item.layer} delay={i * 0.06}>
+                  <div className="flex items-start gap-5 mb-8 last:mb-0">
+                    {/* Layer number + connector */}
                     <div className="flex flex-col items-center shrink-0 pt-1">
-                      <div
-                        className={`w-2.5 h-2.5 rounded-full ${
-                          step.active
-                            ? "bg-accent"
-                            : "border border-border-default bg-transparent"
-                        }`}
-                      />
-                      {i < cascadeSteps.length - 1 && (
+                      <div className="w-7 h-7 rounded-full border border-accent/30 flex items-center justify-center">
+                        <span className="text-caption font-mono text-accent" style={{ fontSize: "0.65rem" }}>
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
+                      </div>
+                      {i < coherenceStack.length - 1 && (
                         <div
-                          className="w-px h-10 mt-1"
+                          className="w-px h-8 mt-1"
                           style={{
-                            backgroundColor: step.active
-                              ? "var(--accent)"
-                              : "var(--border)",
-                            opacity: step.active ? 0.3 : 0.5,
+                            backgroundColor: "var(--accent)",
+                            opacity: 0.15,
                           }}
                         />
                       )}
@@ -168,21 +160,14 @@ export default function ClosingTheGapPage() {
 
                     {/* Content */}
                     <div className="-mt-0.5">
-                      <p
-                        className={`text-body-md font-display font-semibold leading-[1.3] ${
-                          step.active ? "text-text-primary" : "text-text-tertiary"
-                        }`}
-                      >
-                        {step.mode}
+                      <p className="text-caption uppercase text-accent font-mono tracking-[0.08em] mb-1">
+                        {item.layer}
                       </p>
-                      <p
-                        className={`text-body-sm leading-[1.5] mt-0.5 ${
-                          step.active
-                            ? "text-text-secondary"
-                            : "text-text-tertiary"
-                        }`}
-                      >
-                        {step.label}
+                      <p className="text-body-md font-display font-semibold leading-[1.3] text-text-primary">
+                        {item.what}
+                      </p>
+                      <p className="text-body-sm text-text-secondary leading-[1.5] mt-0.5">
+                        {item.detail}
                       </p>
                     </div>
                   </div>
@@ -193,7 +178,7 @@ export default function ClosingTheGapPage() {
         </div>
 
         {/* ============================================== */}
-        {/* THE APPROACH — with inline callout stats */}
+        {/* THE APPROACH */}
         {/* ============================================== */}
         <Grid>
           <ScrollReveal className="col-span-4 md:col-span-8 lg:col-span-7 lg:col-start-2 mt-16 mb-8">
@@ -203,7 +188,7 @@ export default function ClosingTheGapPage() {
           </ScrollReveal>
         </Grid>
 
-        {/* Approach step 1 — with callout */}
+        {/* Step 1 — with callout */}
         <Grid>
           <ScrollReveal className="col-span-4 md:col-span-5 lg:col-span-5 lg:col-start-2 mb-12">
             <div className="flex gap-6">
@@ -218,18 +203,18 @@ export default function ClosingTheGapPage() {
           <ScrollReveal delay={0.1} className="col-span-4 md:col-span-3 lg:col-span-3 lg:col-start-8 mb-12">
             <div className="border-l border-accent/20 pl-6">
               <p className="text-display-md font-display font-bold text-accent leading-[0.95] mb-2">
-                Agency → Partners
+                Trio Model
               </p>
               <p className="text-caption text-text-tertiary font-mono tracking-[0.08em]">
-                Design model shift
+                PM + Designer + Eng Lead
               </p>
             </div>
           </ScrollReveal>
         </Grid>
 
-        {/* Approach step 2 — with callout */}
+        {/* Step 2 */}
         <Grid>
-          <ScrollReveal className="col-span-4 md:col-span-5 lg:col-span-5 lg:col-start-2 mb-12">
+          <ScrollReveal className="col-span-4 md:col-span-8 lg:col-span-7 lg:col-start-2 mb-12">
             <div className="flex gap-6">
               <span className="text-caption font-mono text-accent shrink-0 mt-1.5 tracking-[0.08em]">
                 02
@@ -239,19 +224,33 @@ export default function ClosingTheGapPage() {
               </p>
             </div>
           </ScrollReveal>
+        </Grid>
+
+        {/* Step 3 — with callout */}
+        <Grid>
+          <ScrollReveal className="col-span-4 md:col-span-5 lg:col-span-5 lg:col-start-2 mb-12">
+            <div className="flex gap-6">
+              <span className="text-caption font-mono text-accent shrink-0 mt-1.5 tracking-[0.08em]">
+                03
+              </span>
+              <p className="text-body-md text-text-secondary leading-[1.7] max-w-[54ch]">
+                {study.approach[2]}
+              </p>
+            </div>
+          </ScrollReveal>
           <ScrollReveal delay={0.1} className="col-span-4 md:col-span-3 lg:col-span-3 lg:col-start-8 mb-12">
             <div className="border-l border-accent/20 pl-6">
-              <p className="text-display-md font-display font-bold text-accent leading-[0.95] mb-2">
-                ~3 mo
+              <p className="text-heading-md font-display font-semibold text-text-primary leading-[1.15] mb-2">
+                &ldquo;When can we start?&rdquo;
               </p>
               <p className="text-caption text-text-tertiary font-mono tracking-[0.08em]">
-                New feature to shipped SKU
+                Company-wide momentum shift
               </p>
             </div>
           </ScrollReveal>
         </Grid>
 
-        {/* Mid-section callout — big number break */}
+        {/* Mega type break */}
         <div className="my-8 lg:my-16">
           <Grid>
             <ScrollReveal className="col-span-4 md:col-span-8 lg:col-span-8 lg:col-start-3">
@@ -260,20 +259,20 @@ export default function ClosingTheGapPage() {
                 weightFrom={300}
                 weightTo={700}
               >
-                One Global Design System.
+                1 in 7 U.S. loans.
               </TypeWeight>
             </ScrollReveal>
           </Grid>
         </div>
 
-        {/* Approach steps 3–7 — standard rhythm */}
+        {/* Steps 4–7 */}
         <Grid>
           <ScrollReveal className="col-span-4 md:col-span-8 lg:col-span-7 lg:col-start-2 mb-12">
             <div className="space-y-6">
-              {study.approach.slice(2).map((step, i) => (
-                <div key={i + 2} className="flex gap-6">
+              {study.approach.slice(3).map((step, i) => (
+                <div key={i + 3} className="flex gap-6">
                   <span className="text-caption font-mono text-accent shrink-0 mt-1.5 tracking-[0.08em]">
-                    {String(i + 3).padStart(2, "0")}
+                    {String(i + 4).padStart(2, "0")}
                   </span>
                   <p className="text-body-md text-text-secondary leading-[1.7] max-w-[54ch]">
                     {step}
@@ -285,7 +284,7 @@ export default function ClosingTheGapPage() {
         </Grid>
 
         {/* ============================================== */}
-        {/* BEFORE / AFTER — inline comparison */}
+        {/* BEFORE / AFTER */}
         {/* ============================================== */}
         <div className="border-y border-border-default py-16 lg:py-20 my-8">
           <Grid>
@@ -294,23 +293,23 @@ export default function ClosingTheGapPage() {
                 Before → After
               </h2>
               <p className="text-body-sm text-text-secondary leading-[1.6] max-w-[28ch]">
-                Structural changes, not cosmetic ones.
+                Two years of structural investment.
               </p>
             </ScrollReveal>
 
-            {/* Before column */}
+            {/* Before */}
             <ScrollReveal delay={0.05} className="col-span-2 md:col-span-4 lg:col-span-3 lg:col-start-5 mb-6 lg:mb-0">
               <p className="text-caption uppercase text-text-tertiary font-mono mb-4 tracking-[0.08em]">
                 Before
               </p>
               <div className="space-y-4">
                 {[
-                  "5 design systems",
-                  "Agency model (random assignment)",
-                  "0 user research panel",
-                  "Years in design queue",
-                  "No shared product vision",
-                  "No AI design strategy",
+                  "5 designers, no shared process",
+                  "No design system",
+                  "No product vision",
+                  "No user research practice",
+                  "Database-model navigation",
+                  "0 product screenshots on website",
                 ].map((item) => (
                   <p
                     key={item}
@@ -322,19 +321,19 @@ export default function ClosingTheGapPage() {
               </div>
             </ScrollReveal>
 
-            {/* After column */}
+            {/* After */}
             <ScrollReveal delay={0.15} className="col-span-2 md:col-span-4 lg:col-span-3 lg:col-start-8">
               <p className="text-caption uppercase text-accent font-mono mb-4 tracking-[0.08em]">
                 After
               </p>
               <div className="space-y-4">
                 {[
-                  "1 global design standard",
-                  "Strategic partnerships (owned domains)",
-                  "272,000-person research panel",
-                  "Concept to ship in months",
-                  "3-metric constellation + shared vision",
-                  "Full AI product prototype strategy",
+                  "12 designers in product trios",
+                  "Unified system: iOS, Android, web",
+                  "Multi-year vision, company-wide buy-in",
+                  "Research embedded in every trio",
+                  "User-mental-model navigation",
+                  "$1.2B acquisition (UX cited as top factor)",
                 ].map((item) => (
                   <p
                     key={item}
@@ -349,7 +348,7 @@ export default function ClosingTheGapPage() {
         </div>
 
         {/* ============================================== */}
-        {/* OUTCOME — with closing pull quote */}
+        {/* OUTCOME */}
         {/* ============================================== */}
         <Grid className="py-16">
           <ScrollReveal className="col-span-4 md:col-span-8 lg:col-span-7 lg:col-start-2 mb-12">
@@ -368,9 +367,10 @@ export default function ClosingTheGapPage() {
             <ScrollReveal className="col-span-4 md:col-span-8 lg:col-span-7 lg:col-start-3">
               <blockquote className="border-l-2 border-accent pl-8 lg:pl-12">
                 <p className="text-heading-md font-display font-medium leading-[1.25] tracking-[-0.015em] text-text-secondary italic">
-                  &ldquo;You cannot fix what you cannot see. The audit made the
-                  Coherence Gap visible. Everything that followed was structural
-                  intervention.&rdquo;
+                  &ldquo;UX was cited as a top factor in the acquisition — not
+                  because the screens were pretty, but because the product&apos;s
+                  structural coherence was a competitive moat the acquirer
+                  couldn&apos;t replicate quickly.&rdquo;
                 </p>
               </blockquote>
             </ScrollReveal>
@@ -408,7 +408,7 @@ export default function ClosingTheGapPage() {
                     className="text-body-md font-mono text-text-tertiary hover:text-accent transition-colors"
                     style={{ transitionDuration: "var(--duration-base)" }}
                   >
-                    Next: {next.title.split(" ").slice(0, 3).join(" ")}… →
+                    Next: {next.title.split(" ").slice(0, 4).join(" ")}… →
                   </Link>
                 )}
               </div>

@@ -13,29 +13,45 @@ export function NavTrigger({ isOpen, onClick }: NavTriggerProps) {
   return (
     <button
       onClick={onClick}
-      className="fixed top-6 right-20 z-[101] flex items-center gap-3 group cursor-pointer focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4 outline-none"
+      className="flex items-center gap-3 group cursor-pointer focus-visible:outline-2 focus-visible:outline-accent focus-visible:outline-offset-4 outline-none"
       aria-label={isOpen ? "Close navigation" : "Open navigation"}
       aria-expanded={isOpen}
     >
       <span
-        className="text-caption uppercase text-text-tertiary font-mono group-hover:text-text-primary transition-colors tracking-[0.08em]"
-        style={{ transitionDuration: "var(--duration-base)" }}
+        className="uppercase text-text-tertiary font-mono tracking-[0.08em] group-hover:text-text-primary transition-colors"
+        style={{ transitionDuration: "var(--duration-base)", fontSize: "12px", letterSpacing: "0.96px" }}
       >
         Menu
       </span>
 
-      {/* Two-line icon that morphs into X */}
-      <div className="relative w-6 h-4 flex flex-col justify-between">
+      {/* Three-line hamburger that morphs into X */}
+      <div className="relative w-6 h-4 flex flex-col items-end justify-center gap-[4px]">
+        {/* Line 1 — full width */}
         <motion.span
-          className="block w-full h-px bg-text-primary origin-center"
-          animate={isOpen ? { rotate: 45, y: 7.5 } : { rotate: 0, y: 0 }}
-          transition={{ duration: 0.3, ease: easeOut }}
-        />
-        <motion.span
-          className="block h-px bg-text-primary ml-auto origin-center"
+          className="block h-px bg-text-primary origin-center"
           animate={
             isOpen
-              ? { rotate: -45, y: -7.5, width: "100%" }
+              ? { rotate: 45, y: 6, width: "100%" }
+              : { rotate: 0, y: 0, width: "100%" }
+          }
+          transition={{ duration: 0.3, ease: easeOut }}
+        />
+        {/* Line 2 — ~79% width */}
+        <motion.span
+          className="block h-px bg-text-primary origin-center"
+          animate={
+            isOpen
+              ? { opacity: 0, width: "79%" }
+              : { opacity: 1, width: "79%" }
+          }
+          transition={{ duration: 0.2, ease: easeOut }}
+        />
+        {/* Line 3 — ~66% width, aligned right */}
+        <motion.span
+          className="block h-px bg-text-primary origin-center"
+          animate={
+            isOpen
+              ? { rotate: -45, y: -6, width: "100%" }
               : { rotate: 0, y: 0, width: "66%" }
           }
           transition={{ duration: 0.3, ease: easeOut }}

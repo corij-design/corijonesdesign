@@ -47,7 +47,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Closing the Gap After Four Acquisitions",
     subtitle:
       "How structural coherence turned five acquired companies into one platform",
-    meta: "Enterprise Fintech · 2021–2025",
+    meta: "Enterprise Fintech · 2023–2025",
     description:
       "A mid-size fintech acquired four companies in two years, inheriting five design systems, fragmented research practices, and a product experience that no longer felt like one product. Leadership assumed it was a design problem. It wasn't. It was a coherence problem. I led the structural redesign (team, system, and strategy) that turned a patchwork into a platform.",
     heroStats: [
@@ -61,7 +61,6 @@ export const caseStudies: CaseStudy[] = [
     approach: [
       "Restructured design from an agency model (separate intake process, separate sprints, random designer assignment) to strategic partnerships: each designer paired with a specific PM, with consistent ownership over a part of the user journey. Pairings balanced skills and experience. Teams moved faster with deeper context, producing work that was actually buildable and releasable.",
       "Fixed a broken design-to-engineering pipeline. PMs and designers had been spending months on detailed feature designs that sat in a queue waiting for engineering prioritization. One designer told me she had been at nCino for two years and nothing she designed had been built. This was widespread: thousands of hours of work never realizing value. Six months after I took over, I led a product group through a design sprint that shipped a completely new feature and billable SKU in just over three months. Unheard of at nCino.",
-      "Ran a comprehensive UX audit across all five product surfaces, documenting every inconsistency (54 button styles alone). This made the Coherence Gap visible to leadership. You cannot fix what you cannot see.",
       "Led a multi-year design system consolidation: five systems into one global standard (Figma libraries, code components, shared documentation). This was a structural intervention, not a Figma cleanup.",
       "Stood up research operations from scratch: hired a research ops lead, partnered with Legal and Customer Success, and built a user panel from 0 to 272,000 participants. Went from ad-hoc research to running 10+ concurrent studies.",
       "Replaced a single North Star metric with a three-metric constellation owned by dedicated leadership pods. Led the user satisfaction metric initiative.",
@@ -83,7 +82,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Building Coherence from Zero",
     subtitle:
       "Bringing structural design leadership to a scaling company on its way to a $1.2B acquisition",
-    meta: "B2B2C SaaS · 2019–2021",
+    meta: "B2B2C SaaS · 2021–2023",
     description:
       "Joined SimpleNexus at about 100 employees during COVID. The product had strong market traction but the design function hadn't scaled with it: no design system, no product vision, no research practice, and a team of five. I built the structural coherence (product trio model, shared context, explicit outcomes, ownership architecture) that helped the company reach 350 employees and a $1.2 billion acquisition where UX was cited as a top factor.",
     heroStats: [
@@ -97,8 +96,8 @@ export const caseStudies: CaseStudy[] = [
     approach: [
       "Introduced the product trio model (PM, Designer, Engineering Lead as equal partners), transforming design from downstream execution to upstream partnership. This was a Decision Rights change: designers gained the authority and obligation to shape outcomes, not just outputs.",
       "Led a comprehensive product audit that surfaced the structural gap between what the company was building and what users actually needed. Presented findings company-wide to create the mandate for change.",
-      "Built a 4-year product vision grounded in research (117 homebuyer interviews, full journey mapping). Visualized through prototypes and storytelling, not slide decks. Shared weekly updates for 9 weeks in a public Slack channel. The conversation shifted from 'Are we doing this?' to 'When can we start?'",
-      "Broke the vision into a 9-step strategic roadmap: coherence architecture, not just a product plan. Each step mapped to a major opportunity in the homeownership lifecycle, with explicit outcomes and clear ownership.",
+      "Oversaw the development of a multi-year product vision grounded in extensive user research and full journey mapping. The vision was communicated through prototypes and storytelling rather than slide decks, building momentum across the company until the conversation shifted from 'Are we doing this?' to 'When can we start?'",
+      "Guided the translation of that vision into a strategic roadmap that functioned as coherence architecture, not just a product plan. Each phase mapped to a major opportunity in the homeownership lifecycle, with explicit outcomes and clear ownership across teams.",
       "Grew the design team from 5 to 12 designers, each placed into a product trio (not a design silo). Built the company's first unified design system spanning iOS, Android, and web in both Figma and code.",
       "Established the team's first user research practice, not as a separate function, but as an integrated capability within each product trio.",
       "Co-created the Design Summit, a multi-day offsite format combining skill-building with strategic alignment. Not a team-building retreat: coherence infrastructure that became a recurring ritual.",

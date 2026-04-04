@@ -9,7 +9,7 @@ export function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-6 right-6 z-50 w-10 h-10 flex items-center justify-center rounded-full border border-border-default hover:border-accent transition-colors cursor-pointer"
+      className="flex items-center justify-center cursor-pointer hover:opacity-80 transition-opacity"
       style={{ transitionDuration: "var(--duration-base)" }}
       aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
     >
@@ -17,6 +17,7 @@ export function ThemeToggle() {
         initial={false}
         animate={{ rotate: theme === "dark" ? 0 : 180, scale: 1 }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        className="flex items-center justify-center"
       >
         {theme === "dark" ? (
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">

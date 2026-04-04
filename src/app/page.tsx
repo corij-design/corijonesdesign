@@ -3,7 +3,6 @@ import { SectionBreak } from "@/components/sections/section-break";
 import { ScrollReveal } from "@/components/motion/scroll-reveal";
 import { TypeWeight } from "@/components/typography/type-weight";
 import { Grid, GridOverlay } from "@/components/grid/grid";
-import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { SectionMarker } from "@/components/ui/section-marker";
 import { caseStudies, essays } from "@/lib/content";
 import Link from "next/link";
@@ -11,7 +10,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      <ThemeToggle />
       <GridOverlay />
       <SectionMarker />
 
@@ -150,14 +148,14 @@ export default function Home() {
             </p>
             <div className="flex gap-6">
               <a
-                href="mailto:cori@corijonesdesign.com"
+                href="mailto:corijones@gmail.com"
                 className="text-body-md font-display font-medium text-accent hover:text-accent-hover transition-colors"
                 style={{ transitionDuration: "var(--duration-base)" }}
               >
                 Email
               </a>
               <a
-                href="https://linkedin.com/in/corijonesdesign"
+                href="https://www.linkedin.com/in/cori-jones/"
                 className="text-body-md font-display font-medium text-text-secondary hover:text-text-primary transition-colors"
                 style={{ transitionDuration: "var(--duration-base)" }}
               >

@@ -111,14 +111,14 @@ export default function AboutPage() {
               </p>
               <div className="flex gap-6">
                 <a
-                  href="mailto:cori@corijonesdesign.com"
+                  href="mailto:corijones@gmail.com"
                   className="text-body-md font-display font-medium text-accent hover:text-accent-hover transition-colors"
                   style={{ transitionDuration: "var(--duration-base)" }}
                 >
                   Email
                 </a>
                 <a
-                  href="https://linkedin.com/in/corijonesdesign"
+                  href="https://www.linkedin.com/in/cori-jones/"
                   className="text-body-md font-display font-medium text-text-secondary hover:text-text-primary transition-colors"
                   style={{ transitionDuration: "var(--duration-base)" }}
                 >

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import { NavOverlay } from "./nav-overlay";
 import { NavTrigger } from "./nav-trigger";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 export function NavProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,8 +50,12 @@ export function NavProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <div ref={triggerRef}>
+      <div
+        ref={triggerRef}
+        className="fixed top-5 right-6 z-[101] flex items-center gap-4"
+      >
         <NavTrigger isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+        <ThemeToggle />
       </div>
       <NavOverlay isOpen={isOpen} onClose={handleClose} />
       {children}
