@@ -4,11 +4,17 @@ import crypto from "crypto";
 export interface UploadRecord {
   slug: string;
   originalName: string;
+  ext: string;
   mimeType: string;
   size: number;
   type: "image" | "html";
   url: string;
   createdAt: string;
+}
+
+/** Build the shareable path for a record, e.g. /f/abc123.html */
+export function getSharePath(record: UploadRecord): string {
+  return `/f/${record.slug}${record.ext}`;
 }
 
 function generateSlug(): string {
@@ -50,6 +56,7 @@ export async function saveUpload(file: File): Promise<UploadRecord> {
   const meta: UploadRecord = {
     slug,
     originalName: file.name,
+    ext,
     mimeType: file.type || (isHtml ? "text/html" : "application/octet-stream"),
     size: file.size,
     type: isHtml ? "html" : "image",

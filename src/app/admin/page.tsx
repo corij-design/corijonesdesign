@@ -5,6 +5,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 interface UploadRecord {
   slug: string;
   originalName: string;
+  ext: string;
   mimeType: string;
   size: number;
   type: "image" | "html";
@@ -52,11 +53,16 @@ export default function AdminPage() {
     fetchUploads();
   }, [fetchUploads]);
 
-  const getShareUrl = (slug: string) => {
+  const getShareUrl = (upload: UploadRecord) => {
+    const path = `/f/${upload.slug}${upload.ext || ""}`;
     if (typeof window !== "undefined") {
-      return `${window.location.origin}/s/${slug}`;
+      return `${window.location.origin}${path}`;
     }
-    return `/s/${slug}`;
+    return path;
+  };
+
+  const getSharePath = (upload: UploadRecord) => {
+    return `/f/${upload.slug}${upload.ext || ""}`;
   };
 
   const handleUpload = async (files: FileList | File[]) => {
@@ -99,11 +105,11 @@ export default function AdminPage() {
     }
   };
 
-  const handleCopy = async (slug: string) => {
-    const url = getShareUrl(slug);
+  const handleCopy = async (upload: UploadRecord) => {
+    const url = getShareUrl(upload);
     try {
       await navigator.clipboard.writeText(url);
-      setCopied(slug);
+      setCopied(upload.slug);
       setTimeout(() => setCopied(null), 2000);
     } catch {
       // Fallback
@@ -113,7 +119,7 @@ export default function AdminPage() {
       textarea.select();
       document.execCommand("copy");
       document.body.removeChild(textarea);
-      setCopied(slug);
+      setCopied(upload.slug);
       setTimeout(() => setCopied(null), 2000);
     }
   };
@@ -331,7 +337,7 @@ export default function AdminPage() {
                         color: "var(--text-secondary)",
                       }}
                     >
-                      /s/{upload.slug}
+                      {getSharePath(upload)}
                     </code>
                   </div>
 
@@ -339,7 +345,7 @@ export default function AdminPage() {
                   <div className="flex items-center gap-2">
                     {/* Open */}
                     <a
-                      href={`/s/${upload.slug}`}
+                      href={getSharePath(upload)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 rounded-sm transition-colors hover:opacity-80"
@@ -364,7 +370,7 @@ export default function AdminPage() {
 
                     {/* Copy link */}
                     <button
-                      onClick={() => handleCopy(upload.slug)}
+                      onClick={() => handleCopy(upload)}
                       className="p-2 rounded-sm transition-colors hover:opacity-80 cursor-pointer"
                       style={{
                         color:
