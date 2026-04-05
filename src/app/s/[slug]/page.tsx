@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: record.originalName,
       ...(record.type === "image" && {
-        images: [`/api/uploads/${slug}`],
+        images: [record.url],
       }),
     },
   };
@@ -34,7 +34,8 @@ export default async function SharedPage({ params }: Props) {
     notFound();
   }
 
-  const fileUrl = `/api/uploads/${slug}`;
+  // Use the blob URL directly for fast CDN-served content
+  const fileUrl = record.url;
 
   return (
     <main

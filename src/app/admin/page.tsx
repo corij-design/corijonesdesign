@@ -5,10 +5,10 @@ import { useState, useEffect, useRef, useCallback } from "react";
 interface UploadRecord {
   slug: string;
   originalName: string;
-  fileName: string;
   mimeType: string;
   size: number;
   type: "image" | "html";
+  url: string;
   createdAt: string;
 }
 
@@ -286,7 +286,7 @@ export default function AdminPage() {
                   >
                     {upload.type === "image" ? (
                       <img
-                        src={`/api/uploads/${upload.slug}`}
+                        src={upload.url}
                         alt={upload.originalName}
                         className="w-full h-full object-cover"
                       />

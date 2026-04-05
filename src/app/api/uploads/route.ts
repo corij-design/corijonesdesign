@@ -3,8 +3,13 @@ import { listUploads, saveUpload } from "@/lib/uploads";
 
 // GET /api/uploads — list all uploads
 export async function GET() {
-  const uploads = await listUploads();
-  return Response.json(uploads);
+  try {
+    const uploads = await listUploads();
+    return Response.json(uploads);
+  } catch (err) {
+    console.error("List uploads error:", err);
+    return Response.json({ error: "Failed to list uploads" }, { status: 500 });
+  }
 }
 
 // POST /api/uploads — upload a file
