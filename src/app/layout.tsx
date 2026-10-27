@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { fontLinks } from "@/lib/fonts";
 import { ThemeProvider } from "@/components/theme-provider";
 import { NavProvider } from "@/components/navigation/nav-provider";
@@ -30,6 +31,7 @@ export default function RootLayout({
             {children}
           </NavProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
