@@ -18,7 +18,7 @@ export function SectionMarker() {
 
   useEffect(() => {
     // Only observe sections on the home page
-    if (pathname !== "/") return;
+    if (pathname !== "/new") return;
 
     const observers: IntersectionObserver[] = [];
 
@@ -46,7 +46,7 @@ export function SectionMarker() {
   }, [pathname]);
 
   const handleClick = useCallback(() => {
-    if (pathname !== "/") return;
+    if (pathname !== "/new") return;
     const el = document.getElementById(activeId);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -54,7 +54,7 @@ export function SectionMarker() {
   }, [activeId, pathname]);
 
   // Hide on non-home pages (the nav overlay handles labeling there)
-  if (pathname !== "/") return null;
+  if (pathname !== "/new") return null;
 
   return (
     <button

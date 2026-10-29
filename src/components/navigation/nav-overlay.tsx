@@ -13,35 +13,35 @@ interface NavOverlayProps {
 const navItems = [
   {
     label: "Work",
-    href: "/work",
+    href: "/new/work",
     number: "01",
     description: "Case studies in organizational coherence",
     position: "lg:col-start-2 lg:col-span-4 lg:row-start-1",
   },
   {
     label: "Thinking",
-    href: "/thinking",
+    href: "/new/thinking",
     number: "02",
     description: "Essays on design leadership and systems",
     position: "lg:col-start-7 lg:col-span-4 lg:row-start-1",
   },
   {
     label: "Workshop",
-    href: "/workshop",
+    href: "/new/workshop",
     number: "03",
     description: "Prototypes, tools, and vibe-coded experiments",
     position: "lg:col-start-3 lg:col-span-5 lg:row-start-2",
   },
   {
     label: "Diagnostic",
-    href: "/diagnostic",
+    href: "/new/diagnostic",
     number: "04",
     description: "Measure your organization\u2019s coherence",
     position: "lg:col-start-8 lg:col-span-4 lg:row-start-2",
   },
   {
     label: "About",
-    href: "/about",
+    href: "/new/about",
     number: "05",
     description: "Philosophy, background, and how I think",
     position: "lg:col-start-2 lg:col-span-4 lg:row-start-3",
@@ -244,7 +244,7 @@ export function NavOverlay({ isOpen, onClose }: NavOverlayProps) {
               transition={{ delay: 0.4 }}
             >
               <Link
-                href="/"
+                href="/new"
                 onClick={onClose}
                 className={`text-caption uppercase text-text-tertiary font-mono hover:text-accent transition-colors tracking-[0.08em] ${focusStyles}`}
                 style={{ transitionDuration: "var(--duration-base)" }}

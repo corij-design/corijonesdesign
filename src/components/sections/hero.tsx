@@ -196,9 +196,9 @@ export function Hero() {
             animate="visible"
             custom={sequence.body}
           >
-            Twenty-five years in design and design leadership, diagnosing
-            why talented teams underperform and designing the structural
-            conditions that let them thrive.
+            I&apos;ve spent twenty-five years in design and design leadership.
+            My work is figuring out where teams get stuck, then changing
+            how they make decisions, work together, and ship.
           </motion.p>
 
           {/* Book line */}

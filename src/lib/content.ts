@@ -46,10 +46,10 @@ export const caseStudies: CaseStudy[] = [
     number: "01",
     title: "Closing the Gap After Four Acquisitions",
     subtitle:
-      "How structural coherence turned five acquired companies into one platform",
+      "Bringing five acquired companies together through changes to design, research, and team ownership",
     meta: "Enterprise Fintech · 2023–2025",
     description:
-      "A mid-size fintech acquired four companies in two years, inheriting five design systems, fragmented research practices, and a product experience that no longer felt like one product. Leadership assumed it was a design problem. It wasn't. It was a coherence problem. I led the structural redesign (team, system, and strategy) that turned a patchwork into a platform.",
+      "Four acquisitions in two years left us with five design systems and teams working in different ways. Customers felt it. So did the designers whose work sat in engineering queues. I led 30 designers across four time zones, changing how we partnered with product, ran research, and built a shared platform.",
     heroStats: [
       { value: "5 → 1", label: "Product experiences unified" },
       { value: "30", label: "Designers across 4 time zones" },
@@ -57,17 +57,17 @@ export const caseStudies: CaseStudy[] = [
       { value: "72", label: "NPS (world-class)" },
     ],
     challenge:
-      "Post-acquisition, the company had five definitions of quality, five sets of assumptions about who the customer was, and five inherited ways of making decisions. Every product team was still operating with its own design system, its own research cadence, and its own definition of done. Customers saw the fragmentation before leadership did: support tickets citing inconsistency were up 40%, and Sales was losing deals because the product looked like five different companies stitched together. The design team had grown from 12 to 30, but headcount wasn't the problem. Structure was. Leadership assumed it was a design problem. It wasn't. It was a coherence problem.",
+      "The acquisitions brought five companies together on paper. Each team still had its own design system, research habits, and idea of what good looked like. Support tickets about inconsistency were up 40%. Sales was losing deals because the product looked like five companies stitched together. Design had grown from 12 people to 30, yet adding people hadn't resolved how the work got done. Leadership saw a design problem. I saw teams making decisions without enough shared context or consistent ownership. That's the gap I needed to close.",
     approach: [
-      "Restructured design from an agency model (separate intake process, separate sprints, random designer assignment) to strategic partnerships: each designer paired with a specific PM, with consistent ownership over a part of the user journey. Pairings balanced skills and experience. Teams moved faster with deeper context, producing work that was actually buildable and releasable.",
-      "Fixed a broken design-to-engineering pipeline. PMs and designers had been spending months on detailed feature designs that sat in a queue waiting for engineering prioritization. One designer told me she had been at nCino for two years and nothing she designed had been built. This was widespread: thousands of hours of work never realizing value. Six months after I took over, I led a product group through a design sprint that shipped a completely new feature and billable SKU in just over three months. Unheard of at nCino.",
-      "Led a multi-year design system consolidation: five systems into one global standard (Figma libraries, code components, shared documentation). This was a structural intervention, not a Figma cleanup.",
-      "Stood up research operations from scratch: hired a research ops lead, partnered with Legal and Customer Success, and built a user panel from 0 to 272,000 participants. Went from ad-hoc research to running 10+ concurrent studies.",
-      "Replaced a single North Star metric with a three-metric constellation owned by dedicated leadership pods. Led the user satisfaction metric initiative.",
-      "Guided the design team from no AI strategy to building full product prototype experiences. Pushed the company from a basic 'add a chatbot' approach to a comprehensive AI implementation strategy: enhancement prompts within existing workflows, AI-enhanced content, a visual language helping users distinguish AI-generated content, and contextual integration that minimized the blank-chat-screen problem.",
+      "I replaced the agency model, where design had its own intake process and sprints and designers were assigned as requests came in. Each designer partnered with a specific PM and owned a consistent part of the user journey. I matched those partnerships to people's skills and experience. Designers gained enough context to produce work their teams could build and release.",
+      "One designer told me she'd been at nCino for two years and nothing she'd designed had been built. PMs and designers spent months on detailed features, then waited for engineering to prioritize them. Thousands of hours went into that queue. Six months after I took over, I led a product group through a design sprint. We shipped a new feature and billable SKU in just over three months. That was an unusual pace for nCino, and a concrete example of what needed to change.",
+      "I led the consolidation of five design systems into one global standard. It took multiple years and included the Figma libraries, code components, and shared documentation teams needed to use the system in their daily work.",
+      "Research needed a foundation of its own. I hired a research operations lead and worked with Legal and Customer Success to build a participant panel from zero to 272,000. We went from ad-hoc research to running more than 10 studies at a time.",
+      "We replaced the single North Star metric with three measures, each owned by a dedicated leadership pod. I led the user satisfaction initiative.",
+      "I guided the team's AI design strategy and development of full product prototypes. We moved beyond the initial idea of adding a chatbot. The work included prompts inside existing workflows, AI-enhanced content, and visual cues that helped users recognize AI-generated material. Giving people help in context reduced the need to start with a blank chat screen.",
     ],
     outcome:
-      "The unified platform now serves 151 million users with a world-class NPS of 72 and 98% customer retention. The design team operates as one organization: 30+ designers with shared principles, shared systems, and a shared product vision. Concept-to-ship time went from 'years in a queue' to months. The AI design strategy positioned the product for the next generation of intelligent lending software.",
+      "The unified platform serves 151 million users, with an NPS of 72 and 98% customer retention. More than 30 designers work with shared principles, systems, and a product vision. The new feature gave us a concrete example of moving from concept to release in months, after years of work accumulating in queues. We also had an AI design approach grounded in the lending workflows people already used. For me, coherence meant making those connections hold: between teams, between design and engineering, and between our plans and what reached customers.",
     tags: [
       "Coherence Gap",
       "Design Systems",
@@ -81,10 +81,10 @@ export const caseStudies: CaseStudy[] = [
     number: "02",
     title: "Building Coherence from Zero",
     subtitle:
-      "Bringing structural design leadership to a scaling company on its way to a $1.2B acquisition",
+      "Building the design team and product practices at SimpleNexus as it grew toward a $1.2B acquisition",
     meta: "B2B2C SaaS · 2021–2023",
     description:
-      "Joined SimpleNexus at about 100 employees during COVID. The product had strong market traction but the design function hadn't scaled with it: no design system, no product vision, no research practice, and a team of five. I built the structural coherence (product trio model, shared context, explicit outcomes, ownership architecture) that helped the company reach 350 employees and a $1.2 billion acquisition where UX was cited as a top factor.",
+      "I joined SimpleNexus during COVID, when the company had about 100 employees and five designers. There was no shared design system, product vision, or research practice. I helped build those foundations as the company grew to 350 people. The work included product trios, a team of 12, and a common system across mobile and web. nCino later acquired us for $1.2 billion, with UX cited as a top factor.",
     heroStats: [
       { value: "$1.2B", label: "Acquisition valuation" },
       { value: "5 → 12", label: "Design team growth" },
@@ -92,18 +92,18 @@ export const caseStudies: CaseStudy[] = [
       { value: "9.3×", label: "Task completion speed" },
     ],
     challenge:
-      "SimpleNexus had grown from a basement startup to about 100 employees on the strength of its loan officer product, but the design function was still operating like it had at 20 people. Five designers served multiple product areas with no shared process, no research practice, and no structural connection to product strategy. Navigation was organized around database models instead of user mental models. Sales had lost multi-million-dollar deals because the product looked dated compared to competitors, and 30 to 50% of support calls stemmed from usability issues. Marketing had zero product screenshots on the website. The company didn't need a redesign. It needed coherence.",
+      "SimpleNexus had grown from a basement startup to about 100 people on the strength of its loan officer product. Design still worked much as it had when the company had 20 employees. Five designers covered multiple product areas without a shared process or research practice, and their work had little connection to product strategy. Navigation followed database models rather than how users thought about their work. Sales had lost multi-million-dollar deals because the experience looked dated. Usability issues accounted for 30 to 50% of support calls. There wasn't a single product screenshot on the marketing website. I needed to address the experience and the way the company made product decisions together.",
     approach: [
-      "Introduced the product trio model (PM, Designer, Engineering Lead as equal partners), transforming design from downstream execution to upstream partnership. This was a Decision Rights change: designers gained the authority and obligation to shape outcomes, not just outputs.",
-      "Led a comprehensive product audit that surfaced the structural gap between what the company was building and what users actually needed. Presented findings company-wide to create the mandate for change.",
-      "Oversaw the development of a multi-year product vision grounded in extensive user research and full journey mapping. The vision was communicated through prototypes and storytelling rather than slide decks, building momentum across the company until the conversation shifted from 'Are we doing this?' to 'When can we start?'",
-      "Guided the translation of that vision into a strategic roadmap that functioned as coherence architecture, not just a product plan. Each phase mapped to a major opportunity in the homeownership lifecycle, with explicit outcomes and clear ownership across teams.",
-      "Grew the design team from 5 to 12 designers, each placed into a product trio (not a design silo). Built the company's first unified design system spanning iOS, Android, and web in both Figma and code.",
-      "Established the team's first user research practice, not as a separate function, but as an integrated capability within each product trio.",
-      "Co-created the Design Summit, a multi-day offsite format combining skill-building with strategic alignment. Not a team-building retreat: coherence infrastructure that became a recurring ritual.",
+      "I introduced product trios: a PM, designer, and engineering lead working as equal partners. Designers gained a say in what the team would pursue and responsibility for the result. That changed where design entered the conversation and who could make decisions.",
+      "I led a product audit and presented the findings to the whole company. It gave us a shared view of where the experience was falling short and a basis for deciding what to address.",
+      "The team developed a multi-year product vision using user research and mapping the full journey. I oversaw that work. We showed the vision through prototypes and storytelling so people could see what we were proposing. Eventually the question changed from 'Are we doing this?' to 'When can we start?'",
+      "I guided the work to turn that vision into a roadmap. Each phase addressed an opportunity in the homeownership lifecycle, with outcomes and team ownership spelled out. The roadmap connected the longer-term direction to work teams could take on.",
+      "I grew the team from five designers to 12 and placed each designer in a product trio. We built the company's first shared design system in Figma and code, covering iOS, Android, and web.",
+      "We established a user research practice within the trios. Research became part of the team's work, giving designers, PMs, and engineering leads a way to learn together.",
+      "I co-created the Design Summit, a multi-day offsite where we developed skills and worked on strategic alignment. It became a recurring part of how the team stayed connected.",
     ],
     outcome:
-      "The product went from a simple mobile app to a platform touching 1 in 7 U.S. mortgage loans. NPS hit 72 from 5.7 million homebuyers. Loan application conversion reached 80%. Task completion improved 9.3x. Customer retention hit 98%. The company made the Inc. 5000 list four years running. Then nCino acquired us for $1.2 billion. UX was cited as a top factor in the acquisition, not because the screens were pretty, but because the product's structural coherence was a competitive moat the acquirer couldn't replicate quickly.",
+      "Over this period, the product grew from a mobile app into a platform touching 1 in 7 U.S. mortgage loans. Reported results included an NPS of 72 from 5.7 million homebuyers, 80% loan application conversion, task completion that was 9.3 times faster, and 98% customer retention. The company appeared on the Inc. 5000 list four years running, and nCino acquired us for $1.2 billion. UX was cited as a top factor in the acquisition. My view is that the value extended beyond the screens: we'd built a team, research practice, and shared product direction that could support the company's growth. That experience is part of what informs The Coherence Gap.",
     tags: [
       "Coherence Gap",
       "Product Vision",
@@ -120,7 +120,7 @@ export const caseStudies: CaseStudy[] = [
       "Closing the gap between who Bluehost's customers were and who the product was designed for",
     meta: "Consumer Tech · 2012–2016",
     description:
-      "Bluehost had built a massive customer base on price and reliability, but the experience was designed for sys-admins, not the small business owners who actually used it. The gap between customer reality and product design was the Coherence Gap made visible. Strategy said 'help small businesses.' The product said 'here's cPanel.' That's Unclear Outcomes paired with Misaligned Constraints. I led the structural redesign that closed it.",
+      "Bluehost served small business owners, but its product expected them to know their way around a server control panel. I spent two weeks with support to understand where customers got stuck, then led changes to onboarding and the product experience. Onboarding completion tripled, and support tickets from new users fell 35%.",
     heroStats: [
       { value: "2M+", label: "Active hosting customers" },
       { value: "4", label: "Product lines redesigned" },

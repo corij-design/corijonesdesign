@@ -138,7 +138,7 @@ function AnimatedLogo() {
 
 export function SiteLogo() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const isHome = pathname === "/new";
   const { scrollY } = useScroll();
 
   // On homepage: logo starts at 56px, scales to 32px over first 300px scroll
@@ -151,7 +151,7 @@ export function SiteLogo() {
         className="fixed top-5 left-6 z-[102]"
         style={{ opacity }}
       >
-        <Link href="/" aria-label="Back to home">
+        <Link href="/new" aria-label="Back to home">
           <motion.div style={{ width: size, height: size }}>
             <AnimatedLogo />
           </motion.div>
@@ -168,7 +168,7 @@ export function SiteLogo() {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4, ease }}
     >
-      <Link href="/" aria-label="Back to home">
+      <Link href="/new" aria-label="Back to home">
         <div className="w-8 h-8">
           <AnimatedLogo />
         </div>
