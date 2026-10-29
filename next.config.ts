@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
     return {
       beforeFiles: [
         { source: "/", destination: "/index.html" },
-        { source: "/Sprint-Welcome", destination: "/Sprint-Welcome/index.html" },
       ],
     };
   },
